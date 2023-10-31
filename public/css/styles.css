@@ -408,22 +408,3 @@ h6 {
   }
 }
 
-.error {
-  background-color: #ff4c4c;
-  padding: 10px;
-  border-radius: 7px;
-}
-
-.correcto {
-  background-color: #81c081;
-  padding: 10px;
-  border-radius: 7px;
-}
-
-.ocultar {
-  display: none;
-}
-
-.mostrar {
-  display: block;
-}
