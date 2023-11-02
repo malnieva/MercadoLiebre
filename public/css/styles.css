@@ -35,6 +35,7 @@ header {
 #logo img {
   width: 80%;
   padding: 10px;
+  cursor: pointer;
 }
 /*search*/
 #box__search {
@@ -220,6 +221,11 @@ fieldset legend,
   border-radius: 5px;
   width: 100%;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 450ms;
+}
+button:hover {
+  background-color: #0022AA;
 }
 /*para centrar el texto de inicia sesion*/
 .data__sesion legend {
@@ -291,6 +297,15 @@ h6 {
   li a {
     text-decoration: none;
     color: black;
+    background: linear-gradient(currentColor, currentColor);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all 0.5s;
+  }
+  nav ul li a:hover{
+    color: #0022AA;
+    background-size: 100% 2px;
   }
   ul {
     list-style: none;
@@ -311,9 +326,24 @@ h6 {
     justify-content: space-around;
   }
   .card__product {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 45%;
     margin: 15px;
+    box-shadow: none;
+    transition: all 1s;
+  }
+  .card__product:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  .card__product:hover .description{
+    display: initial;
+  }
+  .fa-truck:hover {
+    animation: girar 1s 1;
+  }
+  @keyframes girar {
+    0% {
+    transform: rotate(-90deg);
+    }
   }
   #figcaption {
     width: 50%;
@@ -328,9 +358,6 @@ h6 {
     background-color: white;
     margin: 0;
     padding: 15px;
-  }
-  .description {
-    display: block;
   }
   /*main formularios*/
   .box__forms {
@@ -351,7 +378,16 @@ h6 {
   .info__footer {
     font-size: 1rem;
   }
+  footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    transition: 475ms;
+  }
+   footer i:hover {
+    color: #e2d523;
+  }
 }
+
 @media (min-width: 1200px) {
   /* header - logo - search - cuotas */
   .header__container {
@@ -383,6 +419,9 @@ h6 {
   }
   #figcaption {
     width: 50%;
+  }
+  .description {
+    display: none;
   }
   .oferta {
     width: 50%;
