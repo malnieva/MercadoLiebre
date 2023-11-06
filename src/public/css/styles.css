@@ -163,7 +163,7 @@ section h3 {
   font-size: 16px;
 }
 /*___________ M A I N   F O R M U L A R I O S ///REGISTER AND LOGIN//// ___________*/
-/*estilos generales que se usaron para los form de los dos html, register and login*/
+/*estilos grales que se usaron para los form de los dos html, register and login*/
 .forms__container {
   display: flex;
   justify-content: center;
@@ -434,6 +434,7 @@ h6 {
   .card__btn {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
   .card__btn button {
     width: 300px;
