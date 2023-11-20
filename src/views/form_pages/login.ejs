@@ -1,0 +1,28 @@
+<!-- head -->
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <!-- header -->
+    <%- include('../partials/header.ejs') %>
+    <!-- MAIN -->
+    <main class="forms__container">
+        <form class="box__forms" action="/" method="get">
+            <!-- datos persona -->
+            <fieldset class="data__persona data__sesion">
+                <legend>Inicia Sesion</legend>
+                <input type="text" name="username" id="username" placeholder="Nombre de usuario" required>
+                <input type="password" name="password" placeholder="Contraseña">
+            </fieldset>
+            <!-- botones -->
+            <section class="card__btn btn--enviar">
+                <a href="/">
+                    <button type="submit">Enviar</button>
+                </a>
+            </section>
+        </form>
+    </main>
+    <!--footer-->
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

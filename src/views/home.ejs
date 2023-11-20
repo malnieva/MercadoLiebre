@@ -1,0 +1,160 @@
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+    <body>
+        <!-- header -->
+        <%- include('./partials/header.ejs') %>
+            <!-- ________________M  A  I  N_________________ -->
+            <main>
+                <!--banner-->
+                <figure id="banner">
+                    <img src="./images/img-home-banner.jpg" alt="banner">
+                </figure>
+                <!-- basado en tu última visita -->
+                <section>
+                    <h3>Basado en tu última visita</h3>
+                    <section class="products__container">
+                        <!-- articulo XX -->
+                        <% productos.forEach(producto => { %>
+                            <article class="card__product">
+                                <figure class="product">
+                                    <img src="./images/<%= producto.img %>" alt="<%= producto.alt %>">
+                                </figure>
+                                <section class="info">
+                                    <figure class="truck"><i class="fa-solid fa-truck"></i></figure>
+                                    <article class="box__info">
+                                        <figcaption><%= producto.price %></figcaption>
+                                        <p class="oferta"><%= producto.off %></p>
+                                    </article>
+                                    <p class="description"><%= producto.description %></p>
+                                </section>
+                            </article>
+                            <% }) %>
+                    </section>
+
+                    <!-- articulo 2 
+                <article class="card__product">
+                    <figure class="product">
+                        <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
+                    </figure>
+                    <section class="info">
+                        <figure class="truck">
+                            <i class="fa-solid fa-truck"></i>
+                        </figure>
+                        <article class="box__info">
+                            <figcaption>$ 230.000</figcaption>
+                            <p class="oferta">20% OFF</p>
+                        </article>
+                        <p class="description">MacBook Pro 2019</p>
+                    </section>
+                </article>
+                 articulo 3 
+                <article class="card__product">
+                    <figure class="product">
+                        <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+                    </figure>
+                    <section class="info">
+                        <figure class="truck">
+                            <i class="fa-solid fa-truck"></i>
+                        </figure>
+                        <article class="box__info">
+                            <figcaption>$ 70.500</figcaption>
+                            <p class="oferta">10% OFF</p>
+                        </article>
+                        <p class="description">Samsung Galaxy S10</p>
+                    </section>
+                </article>
+                 articulo 4 
+                <article class="card__product">
+                    <figure class="product">
+                        <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43">
+                    </figure>
+                    <section class="info">
+                        <figure class="truck">
+                            <i class="fa-solid fa-truck"></i>
+                        </figure>
+                        <article class="box__info">
+                            <figcaption>$ 23.200</figcaption>
+                            <p class="oferta">50% OFF</p>
+                        </article>
+                        <p class="description">SmartTv Samsung 43"</p>
+                    </section>
+                </article>-->
+                    <!-- seccion de ofertas -->
+                    <h3>Seccion de ofertas</h3>
+                    <section class="products__container">
+                        <!-- articulo XX -->
+                        <% productos.forEach(producto => { %>
+                        <article class="card__product">
+                            <figure class="product">
+                                <img src="./images/<%= producto.img %>" alt="<%= producto.alt %>">
+                            </figure>
+                            <section class="info">
+                                <figure class="truck">
+                                    <i class="fa-solid fa-truck"></i>
+                                </figure>
+                                <article class="box__info">
+                                    <figcaption><%= producto.price %></figcaption>
+                                    <p class="oferta"><%= producto.off %></p>
+                                </article>
+                                <p class="description"><%= producto.description %></p>
+                            </section>
+                        </article>
+                        <% }) %>
+                        <!-- articulo 2 
+                        <article class="card__product">
+                            <figure class="product">
+                                <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
+                            </figure>
+                            <section class="info">
+                                <figure class="truck">
+                                    <i class="fa-solid fa-truck"></i>
+                                </figure>
+                                <article class="box__info">
+                                    <figcaption>$ 230.000</figcaption>
+                                    <p class="oferta">20% OFF</p>
+                                </article>
+                                <p class="description">MacBook Pro 2019</p>
+                            </section>
+                        </article>
+                        articulo 3
+                        <article class="card__product">
+                            <figure class="product">
+                                <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+                            </figure>
+                            <section class="info">
+                                <figure class="truck">
+                                    <i class="fa-solid fa-truck"></i>
+                                </figure>
+                                <article class="box__info">
+                                    <figcaption>$ 70.500</figcaption>
+                                    <p class="oferta">10% OFF</p>
+                                </article>
+                                <p class="description">Samsung Galaxy S10</p>
+                            </section>
+                        </article>
+                        articulo 4
+                        <article class="card__product">
+                            <figure class="product">
+                                <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43">
+                            </figure>
+                            <section class="info">
+                                <figure class="truck">
+                                    <i class="fa-solid fa-truck"></i>
+                                </figure>
+                                <article class="box__info">
+                                    <figcaption>$ 23.200</figcaption>
+                                    <p class="oferta">50% OFF</p>
+                                </article>
+                                <p class="description">SmartTv Samsung 43"</p>
+                            </section>
+                        </article>-->
+                    </section>
+                </section>
+
+            </main>
+            <!--footer-->
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+    </html>

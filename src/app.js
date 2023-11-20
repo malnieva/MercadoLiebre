@@ -6,23 +6,20 @@ const app = express();
 const publicPath = path.join(__dirname, "public");
 app.use(express.static(publicPath));
 
-/*const port = 3030;
-app.listen(port, () => console.log(`http://localhost:${port}`));*/
+const mainRoutes = require('./routes/mainRoutes');
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`Servidor corriendo en http://localhost:${port}`));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "home.html"));
-});
+app.get("/", mainRoutes);
+app.get("/registro", mainRoutes);
+app.get("/login", mainRoutes);
+app.get("/prueba", mainRoutes);
 
-app.get("/registro", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "form_pages", "register.html"));
-});
-
-app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "form_pages", "login.html"));
-});
-
-app.use(function (req, res, next) {
-  res.status(404).send("¡Lo siento, no puedo encontrar eso!");
-});
+app.get('*', mainRoutes);
+/*function(req, res){
+  res.send('¡Lo siento, no puedo encontrar eso!', 404);
+});*/
